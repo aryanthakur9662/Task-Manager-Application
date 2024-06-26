@@ -21,7 +21,63 @@ This application was made as an submission of my assignment for the role of full
       * task.routes.js
       * taskRoutes.js
       * Server.js
+----
 
+## Guide to installing the dependecies and creating folders/files:-
+### For Backend,
+* Create a directory for your project and initialize a new Node.js project using npm. Run the commands below in your Terminal/Command Prompt,
+  ```
+    $ mkdir task-manager
+    $ cd task-manager
+    $ npm init -y
+* Install the necessary dependencies for our backend,
+  ```
+    $ npm install express pg sequelize body-parser cors
+    $ npm install --save-dev nodemon sequelize-cli
+* Create the necessary folders for our backend project,
+  ```
+    $ mkdir backend
+    $ cd backend
+    $ mkdir config controllers models routes
+* Initialize Sequelize and configure it to connect to your PostgreSQL database,
+  ```
+    $ npx sequelize-cli init
+* Generate a Task model with the necessary fields,
+  ```
+    $ npx sequelize-cli model:generate --name Task --attributes title:string,description:text,dueDate:date
+* Apply the migrations to create the Task table in your database,
+  ```
+    $ npx sequelize-cli db:migrate
+* Create the main server file __backend/seeders/server.js__.
+* Create CRUD Operations task controller __backend/controllers/task.controller.js__.
+* Create task routes __backend/routes/task.routes.js__
+* Navigate back to the backend directory,
+  ```
+    $ cd task-manager/backend
+* Start the server,
+  ```
+    $ nodemon server.js
+This will start your Express server on port 5001 *(http://localhost:5001/api/tasks)*, and it should be connected to your PostgreSQL database.
+### For Frontend, 
+* Navigate to the root directory of your project and create a new React application,
+  ```
+    $ cd task-manager
+    $ npx create-react-app frontend
+* Navigate to the frontend directory and install Axios for making HTTP requests,
+  ```
+    $ cd frontend
+    $ npm install axios
+* Create a Folder *Components* inside __frontend/src__
+* Inside Components create four different files,
+  * TaskList.js
+  * TaskForm.js
+  * TaskDetail.js
+  * TaskEdit.js
+ 
+* Navigate to the frontend directory and start the React app,
+  ```
+  $ npm start
+Make sure to add the codes in the respective files I have added in my *Frontend* and *Backend* branches in order.
 ----
 ### Frontend API Endpoints
 * __http://localhost:3000/__
