@@ -5,22 +5,31 @@ This application was made as an submission of my assignment for the role of full
 ## The order of files:-
 * Task Manager Appplication
    * Frontend
-      * index.html
+      * node_modules
+      * public
+         * index.html
+      * src
       * App.css
       * App.js
-      * TaskDetail
-      * TaskEdit
-      * TaskForm
-      * TaskList
+      * Components
+         * TaskDetail
+         * TaskEdit
+         * TaskForm
+         * TaskList
         
    * Backend
-      * Config.json
-      * task.controller.js
-      * inex.js
-      * task.js
-      * task.routes.js
-      * taskRoutes.js
-      * Server.js
+      * config
+         * Config.json
+      * controllers
+         * task.controller.js
+      * models
+         * index.js
+         * task.js
+      * routes 
+         * task.routes.js
+         * taskRoutes.js
+      * seeders
+         * Server.js
 ----
 
 ## Guide to installing the dependecies and creating folders/files:-
